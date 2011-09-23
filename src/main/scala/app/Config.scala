@@ -13,6 +13,6 @@ object Config {
 	val appName = "sbt-scalatra-example"
 
 	val webPort = env("WEB_PORT", "8080").toInt
-	val webRoot = env("WEB_ROOT", "web")
+	val webRoot = env("WEB_ROOT", "webapp")
 
 }

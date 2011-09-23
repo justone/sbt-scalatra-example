@@ -24,6 +24,10 @@ object WebService extends Service with Logging {
 	class ExampleApp extends ScalatraServlet with Logging {
 		notFound { response.setStatus(404) ; "" }
 
+        get("*") {
+          servletContext.getNamedDispatcher("default").forward(request, response) 
+        }
+
 		get("/hello/:name") {
 			val name = params("name")
 			contentType = "text/html"

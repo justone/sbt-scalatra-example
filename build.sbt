@@ -8,6 +8,7 @@ var jettyVersion = "7.4.1.v20110513"
 libraryDependencies ++= Seq (
 	"org.eclipse.jetty" % "jetty-server" % jettyVersion,
 	"org.eclipse.jetty" % "jetty-servlet" % jettyVersion,
+	"org.eclipse.jetty" % "jetty-webapp" % jettyVersion % "jetty",
 	"org.scalatra" %% "scalatra" % scalatraVersion,
 	"org.scalatra" %% "scalatra-scalatest" % scalatraVersion,
 	"ch.qos.logback" % "logback-classic" % "0.9.28"
@@ -19,3 +20,6 @@ resolvers ++= Seq (
 )
 
 logLevel := Level.Info
+
+// Adds `jetty-run` command to sbt etc.
+seq(webSettings :_*)

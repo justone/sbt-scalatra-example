@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_3.0.xsd">
+
+    <description>Scalatra and SBT</description>
+    <display-name>Scalatra and SBT</display-name>
+    <servlet>
+        <description>Example Servlet</description>
+        <servlet-name>ExampleServlet</servlet-name>
+        <servlet-class>svc.WebService$ExampleApp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExampleServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>25</session-timeout>
+    </session-config>
+</web-app>
