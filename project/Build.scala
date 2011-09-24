@@ -32,9 +32,9 @@ object SbtTestBuild extends Build {
 			val artifacts = aPath.getParentFile
 
 			// Copy the whole web tree.
-			val dist_web = new File(dist, "web")
+			val dist_web = new File(dist, "webapp")
 			dist_web.mkdir
-			IO.copyDirectory(new File(basedir, "src/main/web"), dist_web)
+			IO.copyDirectory(new File(basedir, "src/main/webapp"), dist_web)
 
 			// Copy everything in the scripts directory and make all the shell scripts executable.
 			IO.copyDirectory(new File(basedir, "src/main/scripts"), dist)
